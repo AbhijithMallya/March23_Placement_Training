@@ -1,0 +1,27 @@
+/*External CSS*/
+
+
+#cssid {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: yellow;
+}
+
+.cssFontSize {
+    font-size: 50px;
+}
+
+.cssAlignment {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.cssColor {
+    background-color: yellow;
+}
+
+/*Referencing CSS properties by Tag Names*/
+p {
+    color: dodgerblue;
+}

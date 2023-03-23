@@ -2,25 +2,63 @@
   <head>
     <!--comment in html-->
     <title>ABHIJITH MALLYA</title>
-  </head>
-  <body>
-    <!--Heading Start-->
-    
-    <!--Internal CSS . CSS properties are seperated by ;-->
-    <h1 style="font-size: 50px; 
-    text-align: center; 
-    margin-top: 100px;
-     background-color: blue   ;">
-      
-     <span style="font-size: 70px; color: chartreuse;">K</span>ANTARA</h1>
+    <!--
+      Internal CSS
+  # -> css id
+  . -> css classes
+-->
+<!--Internal CSS
+<style>
+      #cssid {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 100px;
+        background-color: yellow;
+      }
 
-  
-    
-    
+      .cssFontSize {
+        font-size: 50px;
+      }
+      .cssAlignment {
+        text-align: center;
+        margin-top: 100px;
+      }
+      .cssColor {
+        background-color: yellow;
+      }
+    </style>
+  -->
+
+<!--Linking external css
+    rel = relationship
+  -->
+<link href="style.css" rel="stylesheet">
+
+  </head>
+
+  <body style="background-color: bisque">
+    <!--Heading Start-->
+
+    <!--Inline CSS . CSS properties are seperated by ;-->
+    <h1
+      style="
+        font-size: 40px;
+        text-align: center;
+        margin-top: 100px;
+        background-color: yellow;
+      "
+    >
+      <span style="font-size: 80px; color: rgb(255, 51, 0)">K</span>ANTARA
+    </h1>
+
     <h2>ELEPHANT WHISPER</h2>
-    <h3>FARZI</h3>
+
+    <!--Using ID for css-->
+    <h3 id="cssid">FARZI</h3>
+
     <h4>CHRISTOPHER</h4>
-    <h5>TMKOC</h5>
+    <!--Use space in class to use more than 2 classes-->
+    <h5 class="cssAlignment cssFontSize">TMKOC</h5>
     <h6>CHOTTA BHEEM</h6>
     <!--Heading End-->
 
@@ -99,56 +137,54 @@
       alt="Internet is down"
     />
 
-<br>
-<!-- Form Starts-->
+    <br />
+    <!-- Form Starts-->
 
-<label>USN :</label>
-<input type="text" maxlength="10">
-<br>
-<label>NAME :</label>
-<input type="text" maxlength="20">
-<br>
-<label>PASSWORD :</label>
-<input type="password">
-<br>
-<label>DOB :</label>
-<input type="date">
-<br>
-<label>DATE :</label>
-<input type="datetime-local">
-<br>
-<label>COLOUR PICKER :</label>
-<input type="color">
-<br>
-<label>UPLOAD FILE :</label>
-<input type="file">
-<br>
-<label>AGE :</label>
-<input type="number">
-<br>
+    <label>USN :</label>
+    <input type="text" maxlength="10" />
+    <br />
+    <label>NAME :</label>
+    <input type="text" maxlength="20" />
+    <br />
+    <label>PASSWORD :</label>
+    <input type="password" />
+    <br />
+    <label>DOB :</label>
+    <input type="date" />
+    <br />
+    <label>DATE :</label>
+    <input type="datetime-local" />
+    <br />
+    <label>COLOUR PICKER :</label>
+    <input type="color" />
+    <br />
+    <label>UPLOAD FILE :</label>
+    <input type="file" />
+    <br />
+    <label>AGE :</label>
+    <input type="number" />
+    <br />
 
+    <!--DROP DOWN list of states-->
+    <label>STATES</label>
+    <select>
+      <option disabled>--select--</option>
+      <option selected value="1">KARNATAKA</option>
+      <option value="2">TAMILNADU</option>
+      <option value="3">KERALA</option>
+      <option>MAHARASHTRA</option>
+    </select>
 
-<!--DROP DOWN list of states-->
-<label>STATES</label>
-<select>
-  <option disabled>--select--</option>
-  <option selected value="1">KARNATAKA</option>
-  <option value="2">TAMILNADU</option>
-  <option value="3">KERALA</option>
-  <option>MAHARASHTRA</option>
-</select>
+    <br />
+    <br />
+    <!--Check boxes and Radio Buttons-->
+    <input type="checkbox" />I accept the terms and condition <br /><br />
+    <input type="radio" name="switch" />ON
+    <input type="radio" name="switch" />OFF
+    <br />
+    <button>SUBMIT</button>
 
-<br>
-<br>
-<!--Check boxes and Radio Buttons-->
-<input type="checkbox">I accept the terms and condition
-<br><br>
-<input type="radio" name="switch">ON
-<input type="radio" name="switch">OFF
-<br>
-<button>SUBMIT</button>
-
-<!--DIVISION Tag is used with CSS
+    <!--DIVISION Tag is used with CSS
     Similar to p tag.
     Used to insert CSS Property
 
@@ -156,31 +192,13 @@
    It is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
 -->
 
-<!--CSS = Cascading Style Sheets
+    <!--CSS = Cascading Style Sheets
     Inline CSS
     Internal CSS
     External CSS
 
 -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Form Ends-->
+    <!--Form Ends-->
   </body>
 </html>
