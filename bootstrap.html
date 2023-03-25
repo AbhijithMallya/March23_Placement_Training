@@ -18,8 +18,7 @@
       style="
         background-color: beige;
         height: auto;
-        border: 5px;
-        border-radius: 2%;
+        border-width: 5px;
         border-style: double;
       "
     >
@@ -34,11 +33,14 @@
       </p>
       <hr />
       <label>Name : </label>
-      <input type="text" class="form-control" />
+      <input type="text" class="form-control" id="personName" />
 
+      <span id="personNameErrorMessage" style="color: red"></span>
+      <br />
       <label>Country :</label>
       <select class="form-control">
-        <option>INDIA</option>
+        <option disabled>--SELECTED--</option>
+        <option selected>INDIA</option>
         <option>PAKISTHAN</option>
         <option>USA</option>
         <option>JAPAN</option>
@@ -53,7 +55,14 @@
 
       <br /><br />
 
-      <button class="btn btn-success" on style="width: 100%">submit</button>
+      <button
+        class="btn btn-success"
+        on
+        style="width: 100%"
+        onclick="button_click()"
+      >
+        submit
+      </button>
 
       <!-- bootstrap Grid Start (Total is always 12) -->
 
@@ -169,37 +178,33 @@
       </div>
 
       <!-- Bootstrap grid with card view Close -->
-<br><br>
+      <br /><br />
       <!-- Bootstrap Table Start -->
       <table class="table">
         <thead>
-            <tr class="table-dark">
-                <td>SL</td>
-                <td>STUDENT</td>
-                <td>USN</td>
-            </tr>
-           </thead>
-           <tbody>
-<tr>
-    <td>1</td>
-    <td>ABHIJITH MALLYA</td>
-    <td>4SF20CI002</td>
-
-</tr>
-<tr>
-    <td>2</td>
-    <td>RAJU</td>
-    <td>4SF20CI021</td>
-    
-</tr>
-<tr>
-    <td>3</td>
-    <td>KAJU</td>
-    <td>4SF20CI012</td>
-    
-</tr>
-
-           </tbody>
+          <tr class="table-dark">
+            <td>SL</td>
+            <td>STUDENT</td>
+            <td>USN</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>ABHIJITH MALLYA</td>
+            <td>4SF20CI002</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>RAJU</td>
+            <td>4SF20CI021</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>KAJU</td>
+            <td>4SF20CI012</td>
+          </tr>
+        </tbody>
       </table>
 
       <!-- Bootstrap Table End -->
@@ -208,8 +213,48 @@
     </div>
 
     <script>
+      // DOM manipulation is for html , js to prform insert ,delete,upadte,
+      function button_click() {
+        // Fetch Value from textbox
 
-      
+        //fastest way to access values from tex box
+        var personName = document.getElementById("personName").value;
+
+        if (personName != "") {
+          document.getElementById("personNameErrorMessage").innerHTML = "";
+          alert(personName + " Submitted Successfully");
+        } else {
+          document.getElementById("personNameErrorMessage").innerHTML =
+          "Please Enter Name";
+          return false;
+          alert("Please Enter Name");
+        }
+
+
+
+        
+      }
+      function add() {
+        a = 10;
+        b = 9;
+        c = a + b;
+        console.log("Sum without parameters : " + c);
+        // return c
+      }
+      add();
+      function add_with_parameters(a, b) {
+        sum = a + b;
+        console.log("The Sum is : " + sum);
+      }
+      add_with_parameters(5, 6);
+
+      function keypress() {
+        console.log("Typing Strated");
+        console.clear;
+      }
+      function clear() {
+        console.clear();
+      }
     </script>
   </body>
 </html>
